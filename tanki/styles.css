@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0e4e5; /* Бежевый фон */
+    font-family: 'Arial', sans-serif;
+}
+
+canvas {
+    background: radial-gradient(circle, #cce5ff 0%, #0073e6 100%); /* Градиентный фон холста */
+    border: 3px solid #0056b3;
+    border-radius: 15px; /* Больше скругление углов */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Более заметная тень */
+}
+
+.scoreboard {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 22px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7); /* Тёмный фон для контраста */
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.explosion {
+    position: absolute;
+    background-color: orange;
+    border-radius: 50%;
+    opacity: 0.7;
+}

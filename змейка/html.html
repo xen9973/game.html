@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>🐍 Змейка</title>
+    <link rel="icon" href="C:\Users\kolya\Desktop\python\Новая папка\иконка мана\favicon-16x16.png" type="image/png">
+</head>
+<body>
+    <div class="menu">
+        <h1>Змейка</h1>
+        <div class="difficulty">
+            <button onclick="setDifficulty(100)">Легкий</button>
+            <button onclick="setDifficulty(75)">Средний</button>
+            <button onclick="setDifficulty(50)">Сложный</button>
+        </div>
+        
+        <button id="themeButton" onclick="toggleTheme()">🌙</button>
+        <p>Очки: <span id="score">0</span></p>
+    </div>
+    
+    <div class="leaderboard">
+        <h2>Таблица лидеров</h2>
+        <input type="text" id="nickname" placeholder="Введите ваш никнейм" />
+        <button id="saveScoreBtn">Сохранить очки</button>
+        <ol id="leaderboardList"></ol>
+    </div>
+    
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+    <script src="snake.js"></script>
+</body>
+</html>

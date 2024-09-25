@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #70c5ce;
+    transition: background-color 0.5s, color 0.5s; /* Плавная смена фона */
+}
+
+.dark-theme {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.game-container {
+    position: relative;
+    width: 800px;
+    height: 700px;
+    overflow: hidden;
+    background-color: #70c5ce;
+    border: 5px solid #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: background-color 0.5s; /* Плавная смена фона */
+}
+
+.dark-theme .game-container {
+    background-color: #333;
+}
+
+#bird {
+    position: absolute;
+    width: 50px; /* Увеличенная ширина */
+    height: 50px; /* Увеличенная высота */
+    background-color: yellow; /* Цвет круга */
+    border-radius: 50%; /* Сделать круг */
+    left: 50px;
+    top: 300px;
+    transition: top 0.1s ease;
+}
+
+
+.pipe {
+    position: absolute;
+    width: 60px;
+    background-color: green;
+}
+
+.pipe-preview {
+    position: absolute;
+    width: 60px;
+    background-color: rgba(0, 128, 0, 0.5);
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+#leaderboard {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.5s; /* Плавная смена фона */
+}
+
+.dark-theme #leaderboard {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    position: relative;
+    background-color: #282c34; /* Темный фон по умолчанию */
+    color: white; /* Цвет текста по умолчанию */
+    transition: background-color 0.5s, color 0.5s; /* Плавный переход для фона и цвета текста */
+}
+
+.light-theme {
+    background-color: #ffffff; /* Светлый фон */
+    color: black; /* Цвет текста для светлой темы */
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.point {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: move 10s linear infinite; /* Плавное движение */
+}
+
+@keyframes move {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(100vw, 100vh); } /* Перемещение по экрану */
+}
+
+#menu {
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.5s, color 0.5s; /* Плавный переход для фона и цвета текста меню */
+    background: rgba(0, 0, 0, 0.5); /* Темный фон по умолчанию */
+}
+
+.light-theme #menu {
+    background: rgba(255, 255, 255, 0.9); /* Светлый фон для меню */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px) scale(1.05);
+}
+
+button:active {
+    background-color: #004494;
+    transform: scale(0.95) rotate(3deg);
+}
+
+#blurButton {
+    position: absolute;
+    bottom: 80px; /* Подняли кнопку выше */
+    right: 20px;
+    z-index: 1; /* Чтобы кнопка была выше фона */
+}
+
+#themeButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1; /* Чтобы кнопка была выше фона */
+}
+
+@media (max-width: 600px) {
+    button {
+        width: 100%;
+    }
+}

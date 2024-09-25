@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню игр</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="background"></div>
+    <div id="menu">
+        <h1>Выберите игру</h1>
+        <button onclick="startGame('змейка/html.html')">Змейка</button>
+        <button onclick="startGame('tanki/index.html')">Танки</button>
+        <button onclick="startGame('flappyBird/index.html')">Flappy Bird</button>
+    </div>
+    <button id="blurButton" onclick="toggleBlur()">🌫️</button>
+    <button id="themeButton" onclick="toggleTheme()">☀️</button>
+    <script src="menu.js"></script>
+</body>
+</html>
