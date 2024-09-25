@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #74ebd5, #ACB6E5);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    transition: background 0.5s ease;
+}
+
+.menu {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu h1 {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease;
+}
+
+.menu p {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease;
+}
+
+.difficulty button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.difficulty button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+canvas {
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Стили для таблицы лидеров */
+.leaderboard {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.5s, color 0.5s;
+}
+
+.leaderboard h2 {
+    color: #000;
+    transition: color 0.5s;
+}
+
+.leaderboard input[type="text"] {
+    border: 1px solid #ccc;
+}
+
+.leaderboard ol {
+    padding-left: 0;
+}
+
+/* Темная тема */
+body.dark {
+    background: linear-gradient(to bottom, #333, #555);
+}
+
+.menu h1.dark,
+.leaderboard h2.dark {
+    color: #fff;
+}
+
+.menu p.dark {
+    color: #fff;
+}
+
+.difficulty button.dark {
+    background-color: rgba(100, 100, 100, 0.8);
+}
+
+.canvas.dark {
+    background-color: rgba(200, 200, 200, 0.8);
+}
+
+.leaderboard.dark {
+    background-color: rgba(50, 50, 50, 0.8);
+}
+
+.leaderboard.dark h2 {
+    color: #fff;
+}
