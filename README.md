@@ -1,1 +1,1 @@
-# games.html
+ /games.html
